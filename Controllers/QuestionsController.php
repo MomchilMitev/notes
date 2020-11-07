@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace Controllers;
 
 class QuestionsController
 {
@@ -9,8 +9,8 @@ class QuestionsController
         echo "you are asking a question";
     }
 
-    public function answer()
+    public function answer($id)
     {
-        echo "you are answering a question";
+        echo "you are answering on $id question";
     }
 }

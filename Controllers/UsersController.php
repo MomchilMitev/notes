@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace Controllers;
 
 class UsersController
 {
@@ -12,5 +12,10 @@ class UsersController
     public function login()
     {
         echo "this is login method";
+    }
+
+    public function profile()
+    {
+        echo "profile opened";
     }
 }
