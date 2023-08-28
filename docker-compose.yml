@@ -33,3 +33,14 @@ services:
       SERVICE_NAME: mysql
     networks:
       - notes
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: notes-php
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "9000:9000"
+    networks:
+      - notes
