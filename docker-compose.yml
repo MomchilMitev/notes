@@ -1,0 +1,17 @@
+networks:
+  notes:
+
+services:
+  nginx:
+    image: nginx:bookworm
+    container_name: notes-server
+    ports:
+      - "8888:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - notes
