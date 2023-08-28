@@ -1,2 +1,2 @@
-# PHPRouter
-Simple implementation for routing in vanilla php
+# Notes
+Simple app for managing notes with vanilla php
