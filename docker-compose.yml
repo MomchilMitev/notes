@@ -15,3 +15,21 @@ services:
       - mysql
     networks:
       - notes
+  mysql:
+    image: mysql:8.0-debian
+    container_name: notes-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3307:3306"
+    volumes:
+      - ./mysql:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: notes
+      MYSQL_USER: momo
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - notes
