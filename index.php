@@ -43,4 +43,4 @@ $filteredBooks = array_filter($books, function($book) {
     return $book['author'] === 'Author 2';
 });
 
-require "index.view.php";
+require "views/index.view.php";
